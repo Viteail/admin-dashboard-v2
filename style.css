@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 *,
 *::after,
 *::before {
@@ -9,6 +11,144 @@ html {
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   height: 100%;
   margin: 0;
+}
+
+:root {
+  --green: #009933;
+  --white: #fff;
+  --black: #000;
+  --lightgray: #f2f2f2;
+  --gray: #cccccc;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 4fr;
+  min-height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: 1 / 1 / 3 / 2;
+  padding: 10px;
+  gap: 30px;
+  background: var(--green);
+  color: var(--white);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding: 0px 20px;
+  background: var(--white);
+  box-shadow: 0px 2px 5px var(--gray);
+}
+
+.main {
+  background: var(--lightgray);
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.logo {
+  width: 50px;
+}
+
+.logo-wrapper > .text-container {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.icon-container > img {
+  cursor: pointer;
+  width: 24px;
+}
+
+.nav-wrapper > div,
+.options-wrapper > div {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.nav-wrapper > div > .icon-container,
+.options-wrapper > div > .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-container > a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.search-profile {
+  display: flex;
+}
+
+.search-profile,
+.profile-actions {
+  flex: 1;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  gap: 15px;
+  height: 100%;
+}
+
+.search-bar-container > .icon-container {
+  display: flex;
+}
+
+.input-container {
+  flex: 1;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  max-width: 500px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 15px;
+  background: var(--lightgray);
+}
+
+input:focus {
+  outline: none;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.profile-icon-container > img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.profile-container > .text-container {
+  font-weight: 900;
 }
