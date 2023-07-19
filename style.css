@@ -229,12 +229,6 @@ input:focus {
   font-weight: 900;
 }
 
-.announcements-container {
-}
-
-.trending-container {
-}
-
 .cards-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, 325px);
@@ -279,4 +273,45 @@ input:focus {
 
 .actions-container > .icon-container > img {
   width: 26px;
+}
+
+.announcements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.announcements-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px var(--gray);
+  background: var(--white);
+}
+
+.announcement {
+  flex: 1;
+}
+
+.announcement > .text-container > .big-text {
+  font-size: 1rem;
+}
+
+.announcement > .text-container > .description-text {
+  font-size: 0.8rem;
+}
+
+.announcement:nth-child(1) {
+  padding-bottom: 10px;
+}
+
+.announcement:nth-child(2) {
+  padding: 10px 0px;
+  border-top: 2px var(--lightgray) solid;
+  border-bottom: 2px var(--lightgray) solid;
+}
+
+.announcement:nth-child(3) {
+  padding-top: 10px;
 }
